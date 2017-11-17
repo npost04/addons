@@ -1,0 +1,32 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <AutoDrop>false</AutoDrop>
+        <AutoStack>true</AutoStack>
+        <Delay>0</Delay>
+        <Drop>Hi-Potion +2,Hi-Potion +3,Durium Ore,Hi-Potion,Elixir,Agility Potion,Black Rock,Mythril Ore,Kitron,Breakga,Crystal Petrifact,Ruszor Meat,Blizzard V,Aquamarine,Ram Horn,Lux Pugio,Beech Log,Hi-Elixir,Flocon-de-mer,Pro-Ether,Whirlwind Dirs,Darksteel Ore,Wyvern Tailskin,Translucent Rock,Gain-CHR,Teak Log,Strophadic Earring,Imperial Cermet,Hi-Potion +1,Sunstone,White Rock,Houyi&apos;s Gorget,Green Rock,Emperor Fish,Jacaranda Log,Chrysoberyl,X-Potion +3,Persikos</Drop>
+        <Lot />
+        <Pass>Strophadic Earring</Pass>
+        <Verbose>false</Verbose>
+    </global>
+    <clintbeastwood>
+        <Drop>Hi-Potion +2,Durium Ore,Sunstone,Bizen-osafune,Thunder V,Elixir,Valor Minuet V,Baramnesia,Fluorite,Stone V,Foe Lullaby II,Black Rock,Mythril Ore,Kitron,Horde Lullaby II,Pro-Ether +1,Moonstone,Mind Potion,Absorb-Attri,Aquamarine,Phil. Stone,Ram Horn,Yellow Rock,Magic Pot Shard,Strophadic Earring,White Rock,Comet,Aeroja,Water Carol II,Curaga V,Strength Potion,Mage&apos;s Ballad III,Wyvern Scales,Whirlwind Dirs,Darksteel Ore,Zircon,Gain-CHR,Lux Pugio,Teak Log,Fire Carol II,Imperial Cermet,Purple Rock,X-Potion +2,Hi-Potion +1,Houyi&apos;s Gorget,Green Rock,Emperor Fish,Jacaranda Log,Kakka: Ichi,Aspir II,Beech Log,Arbuda Grip,Migawari: Ichi,Icarus Wing,Int. Potion,Boost-CHR,Kejusu Satin,Animus Augeo,Fiendish Skin,Steel Ingot,Anc. Beast Horn,Aisha: Ichi,Gain-AGI,Fire V,Red Rock,Agility Potion,Hydra Fang,Persikos,Charisma Potion,Boost-AGI,Blizzard V,Temper,Refresh II,Hi-Elixir,Break,Breakga,Crystal Petrifact,Enlight,Hi-Potion +3,Translucent Rock,Jadeite,Cure VI,Manticore Hide,Demon Horn,Blizzaja,King Truffle,Painite,Behemoth Horn,X-Potion +3,Ram Skin,Hi-Potion,Ruszor Meat,W. Spider&apos;s Web,Chrysoberyl,Stoneja,Khimaira Mane,Adloquium,Ace&apos;s Mail,Boost-STR,Holy II,Aero V,Wyvern Skin,Firaja,Ice Carol II,Dexterity Potion,Wyvern Tailskin,Vitality Potion,Ebony Log,Blue Rock,Baramnesra,Regen IV,Pro-Ether,Shell IV,Flocon-de-mer,Mythril Ingot</Drop>
+        <Pass>Mythril Ore</Pass>
+    </clintbeastwood>
+    <davehester>
+        <AutoDrop>true</AutoDrop>
+        <Drop>Copper Ring</Drop>
+    </davehester>
+    <heeroyuy>
+        <AutoDrop>true</AutoDrop>
+        <Drop>Hi-Potion +2,Hi-Potion +3,Durium Ore,Hi-Potion,Elixir,Agility Potion,Black Rock,Mythril Ore,X-Potion +3,Breakga,Crystal Petrifact,Ruszor Meat,Blizzard V,Aquamarine,Ram Horn,Bat Wing,Horde Lullaby II,White Rock,Beech Log,Kitron,Hi-Elixir,Pro-Ether,Gain-CHR,Lux Pugio,Sunstone,Whirlwind Dirs,Darksteel Ore,Translucent Rock,Purple Rock,Hi-Potion +1,Teak Log,Flocon-de-mer,Imperial Cermet,Wyvern Tailskin,Apkallu Egg,Int. Potion,Houyi&apos;s Gorget,Green Rock,Emperor Fish,Jacaranda Log,Strophadic Earring,Chrysoberyl,Persikos</Drop>
+    </heeroyuy>
+    <nentata>
+        <AutoDrop>true</AutoDrop>
+        <Drop>Hi-Potion +2,Translucent Rock,Puk Egg,X-Potion,Pro-Ether +2,Elixir,Valor Minuet V,Baramnesia,Fluorite,Behemoth Horn,Foe Lullaby II,Kitron,Lizard Tail,Horde Lullaby II,Pro-Ether +1,Ice Carol II,Mind Potion,F.Abjuration: Lg.,Rattling Egg,Goblin Mail,Ram Horn,Yellow Rock,Gain-CHR,Comet,Whirlwind Dirs,Boost-DEX,Bomb Queen Core,Flocon-de-mer,Gain-VIT,Houyi&apos;s Gorget,Lizard Skin,Emperor Fish,Jacaranda Log,Persikos,Icarus Wing,Zircon,Boost-CHR,Gain-STR,Shell V,Red Rock,Agility Potion,Charisma Potion,Granite,X-Potion +3,Pigeon&apos;s Blood,Animus Minuo,Bomb Queen Ash,Bat Wing,Painite,Ram Skin,W. Spider&apos;s Web,Raptor Skin,Gibbous Axe,Boost-AGI,Thundaja,Wyvern Skin,Firaja,Bomb Arm,Wyvern Tailskin,Lightning Carol II,Baramnesra,Regen IV,Pro-Ether,Garudite,Sunstone,Thunder V,Hydra Scale,Ephemeron,Bomb Ash,Absorb-Attri,Whm. Testimony,Light Carol II,White Rock,Aeroja,Bat Fang,Curaga V,Hedera Cotehardie,Darksteel Ore,Teak Log,Strophadic Earring,Imperial Cermet,X-Potion +2,Strength Potion,Mage&apos;s Ballad III,Hecteyes Eye,Arbuda Grip,Hi-Potion +3,Dexterity Potion,Steel Ingot,Divine Log,Swiftwing,Fire V,King Truffle,Gain-AGI,Lizard Egg,Blue Rock,Refresh II,Hi-Elixir,Ruszor Meat,Kudzu Aketon,Crystal Petrifact,Chrysoberyl,Stoneja,Hi-Potion +1,Blizzaja,Foe Requiem VII,Adloquium,Cura III,Wind Carol II,Imp Wing,Addle,Goblin Armor,Beech Log,Phoenix Feather,Anc. Beast Horn,Water V,Kakka: Ichi,Int. Potion,Wyvern Skull,S. Herbal Broth,Aquamarine,Beastman Blood,Goblin Mask,Ash Staff,Thokcha Ore,Holy II,Boost-STR,Aisha: Ichi,Jadeite,Hi-Potion,Vitality Potion,Dark Carol II,Green Rock,Boost-VIT,Wyvern Scales,Goblin Helm,Temper,Protect V,Bst. Testimony</Drop>
+    </nentata>
+    <seraphftw>
+        <AutoDrop>true</AutoDrop>
+        <Drop>Hi-Potion +2,Hi-Potion +3,Durium Ore,Hi-Potion,Elixir,Agility Potion,Black Rock,Mythril Ore,Kitron,Breakga,Crystal Petrifact,Ruszor Meat,Blizzard V,Aquamarine,Ram Horn,Gain-CHR,Persikos,X-Potion +3,Chrysoberyl,Jacaranda Log,Lux Pugio,Whirlwind Dirs,Darksteel Ore,Hi-Potion +1,White Rock,Translucent Rock,Teak Log,Flocon-de-mer,Imperial Cermet,Wyvern Tailskin,Sunstone,Boost-CHR,Houyi&apos;s Gorget,Green Rock,Emperor Fish,Pro-Ether,Strophadic Earring,Hi-Elixir,Beech Log</Drop>
+    </seraphftw>
+</settings>
