@@ -16,4 +16,10 @@
             <y>25</y>
         </pos>
     </global>
+    <clintbeastwood>
+        <pos>
+            <x>15</x>
+            <y>50</y>
+        </pos>
+    </clintbeastwood>
 </settings>
