@@ -28,15 +28,15 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- Setup vars that are user-dependent. Can override this function in a sidecar file.
 function user_setup()
-state.OffenseMode:options('Ranged', 'Melee', 'Acc', 'DW', 'DWAcc', 'DWFullBuff')
-state.RangedMode:options('Normal', 'Acc')
+state.OffenseMode:options('Ranged', 'Melee', 'Acc', 'DW', 'DWAcc', 'DWFullBuffDNC', 'DWFullBuffNIN')
+state.RangedMode:options('Normal', 'Acc', 'STP')
 state.WeaponskillMode:options('Normal', 'Acc')
 state.CastingMode:options('Normal', 'Resistant', 'Empy')
 state.IdleMode:options('Normal', 'PDT', 'Refresh', 'RefreshPDT', 'MDT')
 gear.RAbullet = "Decimating Bullet"
 gear.WSbullet = "Decimating Bullet"
 gear.MAbullet = "Decimating Bullet"
-gear.QDbullet = "Animikii Bullet"
+gear.QDbullet = "Animikii bullet"
 gear.defaultobi = "Fotia belt"
 options.ammo_warning_limit = 15
 -- Additional local binds
@@ -69,7 +69,7 @@ sets.goldsmithing = {
 
 
 sets.precast.JA['Triple Shot'] = {body="Chasseur's Frac +1"}
-sets.precast.JA['Snake Eye'] = {legs="Lanun Culottes"}
+sets.precast.JA['Snake Eye'] = {legs="Lanun trews"}
 sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +1"}
 sets.precast.JA['Random Deal'] = {body="Lanun Frac"}
 
@@ -77,7 +77,7 @@ sets.precast.JA['Random Deal'] = {body="Lanun Frac"}
 
 
 sets.precast.CorsairRoll = {head="Lanun Tricorne",hands="Chasseur's Gants +1",back="Camulus's mantle", legs="Desultor tassets", ring1="Barataria ring"}
-sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, {legs="Navarch's Culottes +2", ring1="Barataria ring"})
+sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, {legs="Nvrch. Culottes +2", ring1="Barataria ring"})
 sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, {feet="Chasseur's Bottes +1", legs="Desultor tassets", ring1="Barataria ring"})
 sets.precast.CorsairRoll["Blitzer's Roll"] = set_combine(sets.precast.CorsairRoll, {head="Chasseur's Tricorne +1", legs="Desultor tassets", ring1="Barataria ring"})
 sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, {body="Chasseur's Frac +1", legs="Desultor tassets", ring1="Barataria ring"})
@@ -105,7 +105,7 @@ sets.precast.Waltz['Healing Waltz'] = {}
 -- Fast cast sets for spells
 
 sets.precast.FC = {
-head="Haruspex Hat +1",
+head="Carmine mask +1",
 neck="Orunmila's torque",
 ear1="Enchanter earring +1",
 ear2="Loquacious Earring",
@@ -121,43 +121,60 @@ sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Orunmila's torque
 
 sets.precast.RA = {
 ammo=gear.RAbullet,
-head="Chasseur's Tricorne +1",
+head=gear.TaeonChapeauSnap,
+body=gear.TaeonTabardSnap,
 hands="Carmine Fin. Ga. +1",
 back="Navarch's Mantle",
 waist="Impulse Belt",
-legs="Adhemar kecks",
-feet="Meg. Jam. +1"}
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"}
 
        
 -- Weaponskill sets
 -- Default set for any weaponskill that isn't any more specifically defined
 sets.precast.WS = {
+ammo="Decimating bullet",
 head="Dampening Tam",
 neck="Fotia gorget",
 ear1="Bladeborn Earring",
 ear2="Steelflash Earring",
 body="Adhemar jacket",
-hands="Meg. gloves +1",
+hands="Meghanada gloves +2",
 ring1="Rajas Ring",
 ring2="Epona's Ring",
 back=gear.CorTPBack,
 waist="Fotia Belt",
-legs="Adhemar kecks",
-feet="Herculean boots"}
+legs="Meghanada chausses +1",
+feet=gear.TAHerculeanBoots}
 
  
 -- Specific weaponskill sets. Uses the base set if an appropriate WSMod version isn't found.
 
+sets.precast.WS['Aeolian Edge'] = {
+neck="Sanctity Necklace",
+ear1="Friomisi Earring",
+ear2="Moonshade Earring",
+body="Samnuha coat",
+hands="Carmine Fin. Ga. +1",
+ring1="Archon Ring",
+ring2="Arvina Ringlet +1",
+back=gear.CorMagicalWSBack,
+waist="Fotia belt",
+legs=gear.MABWSDHerculeanTrousers,
+feet=gear.MABHerculeanBoots}
+
+
+
 sets.precast.WS['Savage Blade'] = {
-head="Dampening Tam",
+head="Carmine Mask +1",
 body="Adhemar Jacket",
-hands="Meg. Gloves +1",
+hands="Meghanada gloves +2",
 legs="Meg. Chausses +1",
 feet={ name="Herculean Boots", augments={'"Mag.Atk.Bns."+21','DEX+15','"Treasure Hunter"+1','Accuracy+20 Attack+20','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
 neck="Fotia Gorget",
 waist="Fotia Belt",
-left_ear="Cessance Earring",
-right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +25',}},
+left_ear="Moonshade Earring",
+right_ear="Telos earring",
 left_ring="Apate ring",
 right_ring="Epona's Ring",
 back="Letalis Mantle",
@@ -173,9 +190,9 @@ sets.precast.WS['Last Stand'] = {
 ammo="Decimating Bullet",
 head="Meghanada Visor +1",
 body="Laksamana's frac +2",
-hands="Meg. Gloves +1",
+hands="Meghanada gloves +2",
 legs="Meg. Chausses +1",
-feet="Meg. Jam. +1",
+feet="Meg. Jam. +2",
 neck="Fotia Gorget",
 waist="Fotia Belt",
 left_ear="Clearview Earring",
@@ -223,7 +240,7 @@ feet=gear.MABHerculeanBoots}
 
 -- Midcast Sets
 sets.midcast.FastRecast = {
-head="Haruspex hat +1",
+head="Carmine mask +1",
 ear1="Loquacious earring",
 ear2="Enchanter earring +1",
 neck="Orunmila's torque",
@@ -238,8 +255,21 @@ feet=gear.FCTaeonBoots}
 -- Specific spells
 sets.midcast.Utsusemi = sets.midcast.FastRecast
 sets.midcast.Cure = {
-neck="Phalaina locket",
-legs="Desultor tassets"
+    main="Chatoyant Staff",
+    sub="Oneiros Grip",
+    range="Compensator",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body={ name="Khepri Jacket", augments={'Weapon skill damage +5%',}},
+    hands="Garden Bangles",
+    legs={ name="Desultor Tassets", augments={'"Phantom Roll" ability delay -5','"Cure" potency +5%',}},
+    feet="Meg. Jam. +2",
+    neck="Phalaina Locket",
+    waist="Flume Belt +1",
+    left_ear="Mendi. Earring",
+    right_ear="Beatific Earring",
+    left_ring="Stikini Ring",
+    right_ring="Stikini Ring",
+    back="Solemnity Cape",
 }
 sets.precast.CorsairShot = {
 ammo="Animikii bullet",
@@ -267,7 +297,7 @@ hands="Leyline gloves",
 ring1="Weatherspoon Ring",
 ring2="Sangoma Ring",
 back=gear.CorMagicalWSBack,
-waist="Eschan stone",
+waist="Kwahu kachina belt +1",
 legs="Rawhide trousers",
 feet="Chasseur's bottes +1"}
 
@@ -298,7 +328,7 @@ hands="Leyline gloves",
 ring1="Weatherspoon Ring",
 ring2="Sangoma Ring",
 back=gear.CorMagicalWSBack,
-waist="Eschan stone",
+waist="Kwahu kachina belt +1",
 legs="Rawhide trousers",
 feet="Chasseur's bottes +1"}
 
@@ -313,7 +343,7 @@ hands="Leyline gloves",
 ring1="Weatherspoon Ring",
 ring2="Sangoma Ring",
 back=gear.CorMagicalWSBack,
-waist="Eschan stone",
+waist="Kwahu kachina belt +1",
 legs="Rawhide trousers",
 feet="Chasseur's bottes +1"}
 
@@ -326,13 +356,13 @@ neck="Ocachi Gorget",
 ear1="Enervating Earring",
 ear2="Telos Earring",
 body="Chasseur's Frac +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Hajduk Ring +1",
 back="Gunslinger's cape",
-waist="Eschan Stone",
-legs="Samnuha tights",
-feet="Meg. Jam. +1"}
+waist="Yemaya belt",
+legs="Adhemar Kecks +1",
+feet="Meg. Jam. +2"}
 
 sets.midcast.RA.Acc = {
 ammo=gear.RAbullet,
@@ -341,14 +371,28 @@ neck="Marked gorget",
 ear1="Enervating Earring",
 ear2="Telos Earring",
 body="Laksamana's frac +2",
-hands="Meg. gloves +1",
+hands="Adhemar Wristbands +1",
 ring1="Hajduk Ring +1",
 ring2="Hajduk Ring +1",
 back=gear.CorRangedWSBack,
-waist="Kwahu kachina belt",
-legs="Meg. chausses +1",
-feet="Meg. Jam. +1"}
+waist="Kwahu kachina belt +1",
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"}
 
+sets.midcast.RA.STP= {
+ammo=gear.RAbullet,
+head="Meghanada visor +1",
+neck="Marked gorget",
+ear1="Enervating Earring",
+ear2="Telos Earring",
+body="Laksamana's frac +2",
+hands="Adhemar Wristbands +1",
+ring1="Rajas Ring",
+ring2="Hajduk Ring +1",
+back=gear.CorRangedWSBack,
+waist="Yemaya belt",
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"}
 
 sets.midcast.RA.Acc.TripleShot = {
 ammo=gear.RAbullet,
@@ -357,13 +401,29 @@ neck="Marked gorget",
 ear1="Enervating Earring",
 ear2="Telos Earring",
 body="Laksamana's frac +2",
-hands="Meg. gloves +1",
+hands="Adhemar Wristbands +1",
 ring1="Hajduk Ring +1",
 ring2="Hajduk Ring +1",
 back=gear.CorRangedWSBack,
-waist="Kwahu kachina belt",
-legs="Meg. chausses +1",
-feet="Meg. Jam. +1"}
+waist="Kwahu kachina belt +1",
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"}
+
+sets.midcast.RA.STP.TripleShot = {
+ammo=gear.RAbullet,
+head="Meghanada visor +1",
+neck="Marked gorget",
+ear1="Enervating Earring",
+ear2="Telos Earring",
+body="Laksamana's frac +2",
+hands="Adhemar Wristbands +1",
+ring1="Hajduk Ring +1",
+ring2="Hajduk Ring +1",
+back=gear.CorRangedWSBack,
+waist="Kwahu kachina belt +1",
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"}
+
 -- Sets to return to when not performing an action.
 
 -- Resting sets
@@ -375,7 +435,7 @@ sets.idle = {ammo=empty,
 head="Oce. Headpiece +1",
 neck="Wiglen Gorget",
 ear1="Infused Earring",
-ear2="Telos Earring",
+ear2="Etiolation Earring",
 body="Khepri jacket",
 hands="Garden bangles",
 ring1="Sheltered Ring",
@@ -383,13 +443,13 @@ ring2="Paguroidea Ring",
 back="Moonbeam Cape",
 waist="Flume Belt +1",
 legs="Carmine Cuisses +1",
-feet="Meg. Jam. +1"}
+feet="Meg. Jam. +2"}
 
 sets.idle.Refresh = {ammo=empty,
 head="Rawhide mask",
 neck="Wiglen Gorget",
 ear1="Infused Earring",
-ear2="Telos Earring",
+ear2="Etiolation Earring",
 body="Mekosu. Harness",
 hands="Garden bangles",
 ring1="Sheltered Ring",
@@ -401,39 +461,40 @@ feet="Skadi's Jambeaux +1"}
 
 sets.idle.RefreshPDT = {ammo=empty,
 head="Rawhide mask",
-neck="Twilight Torque",
+neck="Wiglen Gorget",
 ear1="Infused Earring",
-ear2="Telos Earring",
+ear2="Etiolation Earring",
 body="Mekosu. harness",
 hands="Umuthi gloves",
 ring1="Defending Ring",
 ring2="Vocane ring",
-back="Moonbeam Cape",
+--back="Moonbeam Cape",
+back="Mecistopins mantle",
 waist="Flume Belt +1",
-legs="Rawhide trousers",
+legs=gear.RefreshHerculeanTrousers,
 feet="Skadi's jambeaux +1"}
 
 sets.idle.PDT = {
 head="Meghanada Visor +1",
 neck="Loricate Torque +1",
-ear1="Infused Earring",
-ear2="Telos Earring",
-body="Meghanada cuirie",
-hands="Meg. Gloves +1",
+ear1="Odnowa Earring +1",
+ear2="Etiolation Earring",
+body="Meghanada Cuirie +1",
+hands="Meghanada gloves +2",
 ring1="Defending Ring",
-ring2="Vocane ring",
+ring2="Meghanada ring",
 back="Moonbeam cape",
 waist="Flume Belt +1",
 legs="Carmine cuisses +1",
-feet="Meg. Jam. +1"}
+feet="Meg. Jam. +2"}
 
 sets.idle.MDT = {
 head="Dampening Tam",
 neck="Loricate Torque +1",
-ear1="Ethereal earring",
-ear2="Infused earring",
+ear1="Odnowa earring +1",
+ear2="Etiolation earring",
 body="Samnuha coat",
-hands="Floral gauntlets",
+ 
 ring1="Defending Ring",
 ring2="Vocane ring",
 back="Mubvum. Mantle",
@@ -447,22 +508,22 @@ head="Meghanada visor +1",
 neck="Loricate torque +1",
 ear1="Cessance Earring",
 ear2="Telos Earring",
-body="Meghanada cuirie",
-hands="Meghanada gloves +1",
+body="Meghanada Cuirie +1",
+hands="Meghanada gloves +2",
 ring1="Defending Ring",
 ring2="Vocane ring",
 back="Moonbeam Cape",
 waist="Flume Belt +1",
 legs="Meg. Chausses +1",
-feet="Meghanada jambeaux +1"}
+feet="Meghanada jambeaux +2"}
 
 sets.defense.MDT = {
 head="Dampening Tam",
 neck="Loricate Torque +1",
-ear1="Clearview Earring",
-ear2="Volley Earring",
+ear1="Odnowa Earring",
+ear2="Odnowa Earring +1",
 body="Samnuha coat",
-hands="Floral gauntlets",
+
 ring1="Defending Ring",
 ring2="Vocane ring",
 back="Mubvum. Mantle",
@@ -498,38 +559,53 @@ legs="Taeon tights",
 feet=gear.TPHerculeanBoots}
 
 sets.engaged.DW = {ammo=empty,
-head=gear.TPTaeonChapeau,
+head=gear.TPTaeonChapeau, --5
 neck="Asperity Necklace",
-ear1="Suppanomimi",
-ear2="Telos Earring",
-body="Adhemar jacket",
-hands=gear.TPTaeonGloves,
+ear1="Dudgeon earring",  ---7
+ear2="Heartseeker earring", ---
+body="Adhemar jacket", ---5
+hands=gear.TPTaeonGloves, ---5
 ring1="Epona's Ring",
 ring2="Oneiros Ring",
 back=gear.CorTPBack,
 waist="Windbuffet belt +1",
-legs="Carmine cuisses +1",
-feet=gear.TPTaeonBoots}
+legs="Carmine cuisses +1", ---6
+feet=gear.TPTaeonBoots} ---8
 
 
-sets.engaged.DWAcc = {ammo=empty,
+sets.engaged.DWAcc = 
+{ammo=empty,
 head="Dampening Tam",
-neck="Ej Necklace",
+neck="Lissome Necklace",
 ear1="Cessance Earring",
+ear2="Telos Earring",
+body="Adhemar jacket", --5
+hands=gear.AdhemarWristbandsMelee,
+ring1="Chirich Ring",
+ring2="Chirich ring",
+back=gear.CorTPBack,
+waist="Kentarch belt +1",
+legs="Carmine Cuisses +1", --5
+feet=gear.TAHerculeanBoots} --8
+
+sets.engaged.DWFullBuffNIN = {ammo=empty,
+head="Dampening Tam",
+neck="Lissome Necklace",
+ear1="Suppanomimi",
 ear2="Telos Earring",
 body="Adhemar jacket",
 hands=gear.AdhemarWristbandsMelee,
 ring1="Chirich Ring",
-ring2="Chirich Ring",
+ring2="Epona's ring",
 back=gear.CorTPBack,
-waist="Kentarch belt +1",
-legs="Carmine cuisses +1",
-feet="Herculean Boots"}
+waist="Windbuffet Belt +1",
+legs="Samnuha Tights",
+feet=gear.TAHerculeanBoots}
 
-sets.engaged.DWFullBuff = {ammo=empty,
+sets.engaged.DWFullBuffDNC = {ammo=empty,
 head="Dampening Tam",
 neck="Lissome Necklace",
-ear1="Cessance Earring",
+ear1="Suppanomimi",
 ear2="Telos Earring",
 body="Adhemar jacket",
 hands=gear.AdhemarWristbandsMelee,
@@ -537,13 +613,10 @@ ring1="Chirich Ring",
 ring2="Chirich ring",
 back=gear.CorTPBack,
 waist="Kentarch belt +1",
-legs="Adhemar kecks",
+legs="Carmine cuisses +1",
 feet=gear.TAHerculeanBoots}
 
-sets.engaged.Ranged = {ammo=empty,
-head="Whirlpool Mask",neck="Twilight Torque",ear1="Clearview Earring",ear2="Volley Earring",
-body="Lanun frac",hands="Iuitl Wristbands +1",ring1="Defending Ring",ring2="Roller's Ring",
-back="Moonbeam Cape",waist="Flume Belt +1",legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"} 
+sets.engaged.Ranged = sets.idle.MDT
 
 sets.TripleShot = 
 {body="Chasseur's frac +1"}

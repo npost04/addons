@@ -86,8 +86,8 @@ function init_gear_sets()
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -102,7 +102,10 @@ function init_gear_sets()
 		body="Reverence surcoat +2",
 		neck="Moonbeam necklace", --10
 		ear2="Knightly earring",--9
-		hands="Eschite gauntlets", --15
+		hands="Souveran handschuhs +1", --15
+		ring1="Moonbeam Ring",
+		ring2="Apeile Ring +1",
+		back="Moonbeam Cape",
 		legs="Founder's hose",--30
 		feet="Odyssean greaves"--15
 		} 
@@ -121,8 +124,11 @@ function init_gear_sets()
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {
         head="Reverence Coronet +1",
-        body="Reverence Surcoat +2",hands="Reverence Gauntlets +1",ring1="Leviathan Ring",ring2="Aquasoul Ring",
-        back="Weard Mantle",legs="Reverence Breeches +1",feet="Whirlpool Greaves"}
+        body="Reverence Surcoat +2",
+		hands="Reverence Gauntlets +1",
+        back="Weard Mantle",
+		legs="Reverence Breeches +1",
+		feet="Whirlpool Greaves"}
     
 
     -- Waltz set (chr and vit)
@@ -169,8 +175,8 @@ function init_gear_sets()
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -209,7 +215,7 @@ function init_gear_sets()
     sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {ring1="Leviathan Ring",ring2="Aquasoul Ring"})
     sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {ring1="Leviathan Ring"})
 
-    sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {hands="Buremte Gloves",waist="Zoran's Belt"})
+    sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS,{ waist="Zoran's Belt"})
     sets.precast.WS['Chant du Cygne'].Acc = {
 	ammo="Ginsen",
 	head="Valorous mask",
@@ -312,10 +318,10 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 		neck="Moonbeam necklace", --10
 		ear2="Knightly earring",--9
 		body="Reverence surcoat +2",
-		hands="Eschite gauntlets", --15
-		ring1="Apeile ring",
+		hands="Souveran handschuhs +1",
+		ring1="Moonbeam ring",
 		ring2="Apeile ring +1",
-		back=gear.PLDEnmityCape,
+		back="Moonbeam Cape",
 		waist="Creed Baudrier",
 		legs="Founder's hose",--30
 		feet="Odyssean greaves"--15
@@ -323,7 +329,7 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
     sets.midcast.Enmity = {
 	    ammo="Iron gobbet",
 		head="Reverence coronet +1",
-		neck="Moonbeam necklace ",
+		neck="Moonbeam necklace",
 		body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Apeile ring",
@@ -335,12 +341,12 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	    }
 
     sets.midcast.Flash = {
-	    ammo="Iron gobbet",
-		head="Reverence coronet +1",
+	    ammo="Sapience Orb",
+		head="Carmine Mask +1",
 		neck="Moonbeam necklace",
 		ear1="Enchanter's earring +1",
 		ear2="Loquacious earring",
-		body="Souveran cuirass",
+		body="Rev. Surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Apeile ring",
 		ring2="Apeile ring +1",
@@ -350,21 +356,13 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 		feet="Souveran schuhs +1",
 	}
 	
-	sets.midcast.Flash.SID = set_combine (sets.midcast.Flash, {
-	    ammo="Staunch tathlum",--10
-		head="Souveran schaller +1",--15
-		neck="Moonbeam necklace", --10
-		ear2="Knightly earring",--9
-		hands="Eschite gauntlets", --15
-		legs="Founder's hose",--30
-		feet="Odyssean greaves"--15
-		})
+	sets.midcast.Flash.SID = sets.midcast.Flash.HP
     sets.midcast.Flash.HP = {
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -394,8 +392,23 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
+        body="Reverence surcoat +2",
+		hands="Souv. Handsch. +1",
+		ring1="Moonbeam Ring",
+		ring2="Moonbeam Ring",
+        back="Moonbeam cape",
+		waist="Gold moogle belt",
+		legs="Souveran Diechlings +1",
+		feet="Souveran Schuhs +1"}
+		
+	sets.midcast.Cure.SID = {
+	    ammo="Staunch tathlum",
+        head="Souveran schaller +1",
+		neck="Loricate torque +1",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -411,10 +424,10 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 		legs="Reverence Breeches +1"}
 	
     sets.midcast.Phalanx = {	--28/30 from skill + 25 from gear = 53/55 total dmg reduction 
-	    sub="Priwen", --2
+	    --sub="Priwen", --2
 	    ammo="Staunch Tathlum",
         head="Yorium Barbuta", --3
-        body="Yorium Cuirass", --3
+        body="Odyss. Chestplate", --3
         hands="Souv. Handsch. +1", --5
         legs={ name="Odyssean Cuisses", augments={'VIT+6','"Dbl.Atk."+3','Phalanx +4','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}, --4
         feet="Souveran Schuhs +1", --3
@@ -434,12 +447,11 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	body="Rev. Surcoat +1",
 	hands="Eschite gauntlets",
 	ring1="Globidonta ring",
-	back="Altruistic cape",
 	waist="Asklepian belt",
 	legs="Kaiser diechlings",
 	feet="Templar sabatons"	
 	}
-	sets.midcast['Divine magic'].SID = sets.mid
+	sets.midcast['Divine magic'].SID = sets.midcast['Divine magic']
 	
 	sets.midcast.Reprisal = sets.engaged.HP
 	
@@ -466,7 +478,6 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	body="Rev. Surcoat +1",
 	hands="Eschite gauntlets",
 	ring1="Globidonta ring",
-	back="Altruistic cape",
 	waist="Asklepian belt",
 	legs="Kaiser diechlings",
 	feet="Templar sabatons"	
@@ -486,8 +497,8 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
     
 	
     sets.resting = {neck="Creed Collar",
-        ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        waist="Austerity Belt"}
+        ring1="Sheltered Ring",ring2="Paguroidea Ring",}
+        
     
 
     -- Idle sets
@@ -525,9 +536,24 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
+        body="Reverence surcoat +2",
+		hands="Souv. Handsch. +1",
+		ring1="Moonbeam Ring",
+		ring2="Moonbeam Ring",
+        back="Moonbeam cape",
+		waist="Gold moogle belt",
+		legs="Carmine cuisses +1",
+		feet="Souveran schuhs +1"}
+
+    sets.idle.Reraise =  {
+	    ammo="Staunch tathlum",
+        head="Twilight Helm",
+		neck="Loricate torque +1",
 		ear1="Creed Earring",
 		ear2="Thureous Earring",
-        body="Reverence surcoat +2",
+        body="Twilight Mail",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
 		ring2="Moonbeam ring",
@@ -535,8 +561,7 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 		waist="Gold moogle belt",
 		legs="Carmine cuisses +1",
 		feet="Souveran schuhs +1"}
-
-    sets.idle.Reraise = {head="Twilight Helm", body="Twilight Mail"}
+	
 	
     sets.idle.Weak = {ammo="Iron Gobbet",
         head="Reverence Coronet +1",neck="Creed Collar",ear1="Creed Earring",ear2="Thureous Earring",
@@ -592,8 +617,8 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -623,8 +648,7 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
         head="Reverence Coronet +1",
 		neck="Lavalier +1",
 		ear1="Creed Earring",
-		ear2="Buckler Earring",
-        body="Reverence Surcoat +1",
+		body="Reverence Surcoat +1",
 		hands="Reverence Gauntlets +1",
 		ring1="Defending Ring",
 		ring2="Vocane ring",
@@ -672,36 +696,34 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
 
     sets.engaged.Acc = {
 	    ammo="Ginsen",
-        head="Valorous mask",
-		neck="Asperity Necklace",
+        head="Flamma Zucchetto +2",
+		neck="Lissome Necklace",
 		ear1="Cessance Earring",
 		ear2="Telos Earring",
-        body="Emicho Haubert",
-		hands="Souveran handschuhs +1",
+        body="Flamma Korazin +1",
+		hands="Flamma Manopolas +1",
 		ring1="Chirich Ring", 
-		ring2="Chirich ring",
+		ring2="Flamma ring",
         back=gear.PldEnmityCape,
 		waist="Goading Belt",
 		legs="Carmine cuisses +1",
-		feet="Emicho gambieras"}
+		feet="Flamma gambieras +1"}
 
     sets.engaged.DW = {ammo="Ginsen",
         head="Otomi Helm",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
         body="Gorney Haubert +1",hands="Cizin Mufflers",ring1="Rajas Ring",ring2="K'ayres Ring",
         back="Atheling Mantle",waist="Cetl Belt",legs="Cizin Breeches",feet="Whirlpool Greaves"}
 
-    sets.engaged.DW.Acc = {ammo="Ginsen",
-        head="Yaoyotl Helm",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Gorney Haubert +1",hands="Buremte Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
-        back="Weard Mantle",waist="Zoran's Belt",legs="Cizin Breeches",feet="Whirlpool Greaves"}
+    sets.engaged.DW.Acc = {
+	    }
 
     sets.engaged.PDT = sets.defense.PDT
     sets.engaged.HP = {
 	    ammo="Staunch tathlum",
         head="Souveran schaller +1",
 		neck="Loricate torque +1",
-		ear1="Creed Earring",
-		ear2="Thureous Earring",
+		ear1="Odnowa Earring +1",
+		ear2="Odnowa Earring",
         body="Reverence surcoat +2",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
@@ -721,9 +743,9 @@ sets.precast.WS['Burning Blade'] = sets.engaged.HP
     -- Custom buff sets
     --------------------------------------
 
-    sets.buff.Doom = {ring2="Saida Ring"}
+    sets.buff.Doom = {ring1="Saida ring", ring2="Saida Ring", legs="Shabti Cuisses +1"}
     sets.buff.Cover = {head="Reverence Coronet +1", body="Caballarius Surcoat +1"}
-	sets.buff.Reprisal = {sub="Priwen"}
+	--sets.buff.Reprisal = {sub="Priwen"}
 end
 
 

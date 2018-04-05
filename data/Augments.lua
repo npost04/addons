@@ -14,14 +14,17 @@ gear.TPTaeonChapeau ={ name="Taeon Chapeau", augments={'Accuracy+15 Attack+15','
 gear.TPTaeonGloves = { name="Taeon Gloves", augments={'Accuracy+25','"Dual Wield"+5','STR+7 DEX+7',}}
 gear.TPTaeonTights = { name="Taeon Tights", augments={'Accuracy+23','"Dual Wield"+5','Crit. hit damage +2%',}}
 gear.TPTaeonBoots = { name="Taeon Boots", augments={'Accuracy+20 Attack+20','"Dual Wield"+4','DEX+3',}}
---Ranged
 
+--Ranged
+gear.TaeonChapeauSnap={ name="Taeon Chapeau", augments={'"Snapshot"+4','"Snapshot"+5',}}
+gear.TaeonTabardSnap= { name="Taeon Tabard", augments={'"Snapshot"+5','"Snapshot"+4',}}
     
 
 --Reisenjima gear
 
 --Herculean
 --accuracy herc set
+gear.TAHerculeanGloves = { name="Herculean Gloves", augments={'Accuracy+28','"Triple Atk."+4',}}
 gear.TAHerculeanBoots = { name="Herculean Boots", augments={'Accuracy+22','"Triple Atk."+4',}}
 --Magic attack Herculean
 gear.MABHerculeanBoots = { name="Herculean Boots", augments={'"Mag.Atk.Bns."+21','DEX+15','"Treasure Hunter"+1','Accuracy+20 Attack+20','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
@@ -43,8 +46,8 @@ gear.MerlinicHoodFC = { name="Merlinic Hood", augments={'"Fast Cast"+7','Mag. Ac
 gear.MerlinicCrackowsFC = { name="Merlinic Crackows", augments={'Mag. Acc.+16','"Fast Cast"+4','INT+10','"Mag.Atk.Bns."+2',}}
 --MagicBurst
 gear.MerlinicHoodMB = { name="Merlinic Hood", augments={'"Mag.Atk.Bns."+22','Magic burst dmg.+10%','INT+4','Mag. Acc.+8',}}
-gear.MerlinicShalwarMB = { name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Magic burst dmg.+6%','VIT+15',}}
-gear.MerlinicCrackowsMB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+25','Magic burst dmg.+7%','INT+2',}}
+gear.MerlinicShalwarMB = { name="Merlinic Shalwar", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Magic burst dmg.+10%','INT+9',}}
+gear.MerlinicCrackowsMB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+28','Magic burst dmg.+7%','CHR+9','Mag. Acc.+12',}}
 --
 --
 --
@@ -55,17 +58,23 @@ gear.AdhemarKecksMelee = { name="Adhemar Kecks", augments={'DEX+10','AGI+10','Ac
 --ranged
 gear.AdhemarWristbandsRanged = { name="Adhemar Wristbands", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
 --gear.AdhemarKecksRanged =
---Job Capes
---PLD capes
+-------Job Capes----------
+---THF capes---
+gear.THFSTPCape = { name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
+---PLD capes---
 gear.PldEnmityCape = {name="Rudianos's Mantle", augments={'HP+60','Accuracy+20 Attack+20','Enmity+10',}}
 gear.PldFCCape = {name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+10','"Fast Cast"+10',}}
-
---BLU capes
+---RNG capes---
+gear.RngTPCape = { name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}}
+gear.RngWSDCape = { name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Weapon skill damage +10%',}}
+---BLU capes---
 gear.BluCrit = {name="Rosmerta's Cape", augments={'DEX+19','Accuracy+20 Attack+20','DEX+1','Crit.hit rate+10',}}
 gear.BluTP ={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}}
---Cor capes
+
+---Cor capes---
 
 gear.CorTPBack = {name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+2','"Store TP"+10',}}
 gear.CorRangedWSBack = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+2','Weapon skill damage +10%',}}
-gear.CorMagicalWSBack = { name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 Mag. Dmg.+20','Weapon skill damage +10%',}}
+gear.CorMagicalWSBack = { name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
 --gear.CorMeleeWSBack =
+ 

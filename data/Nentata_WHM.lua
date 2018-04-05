@@ -7,6 +7,8 @@ mote_include_version = 2
 -- Load and initialize the include file.
 include('Mote-Include.lua')
 end
+
+
 -- Setup vars that are user-independent. state.Buff vars initialized here will automatically be tracked.
 function job_setup()
 state.Buff['Afflatus Solace'] = buffactive['Afflatus Solace'] or false

@@ -114,7 +114,7 @@ include('Augments.lua')
 sets.precast.JA['Bounty Shot'] = {hands="Amini Glovelettes +1", waist="Chaac belt"}
 sets.precast.JA['Double Shot'] = {head="Amini Gapette +1"}
 sets.precast.JA['Camouflage'] = {body="Orion Jerkin +2"}
-sets.precast.JA['Sharpshot'] = {legs=" +2"}
+sets.precast.JA['Sharpshot'] = {legs=" Orion braccae +2"}
 sets.precast.JA['Velocity Shot'] = {body="Amini Caban +1"}
 sets.precast.JA['Scavenge'] = {feet="Orion Socks +2"}
 sets.precast.JA['Shadowbind'] ={hands="Orion bracers +2"}
@@ -139,8 +139,8 @@ back="Shaper's shawl"}
 sets.precast.JA['Eagle Eye Shot'] = {
 head="Uk'uxkaj Cap",
 neck="Rancor Collar",
-back="Buquwik Cape",
-hands=gear.AdhemarWristbandsRanged,
+back=gear.RngWSDCape,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
 legs="Arcadian Braccae +1",
@@ -173,8 +173,8 @@ sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, { neck="Orunmila's torqu
 sets.idle = {
 head="Ocelomeh Headpiece +1",
 neck="Wiglen gorget",
-ear1="Infused Earring",
-ear2="Telos Earring",
+ear1="Telos Earring",
+ear2="Infused Earring",
 body="Khepri jacket",
 hands="Garden bangles",
 ring1="Paguroidea Ring",
@@ -186,11 +186,11 @@ feet="Jute boots +1"
 }
 sets.idle.PDT = set_combine(sets.idle, {
 head="Meghanada visor +1",
-ear1="Infused earring",
-ear2="Telos earring",
+ear1="Telos earring",
+ear2="Infused earring",
 neck="Loricate torque +1",
-body="Meghanada cuirie",
-hands="Meg. gloves +1",
+body="Meghanada cuirie +1",
+hands="Meghanada gloves +2",
 ring1="Defending Ring",
 ring2="Vocane Ring",
 back="Moonbeam cape",
@@ -206,7 +206,7 @@ neck="Erudition necklace",
 ear1="Cessance earring",
 ear2="Mache Earring",
 body="Adhemar jacket",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Chirich Ring",
 ring2="Chirich Ring",
 back="Lupine cape",
@@ -216,17 +216,17 @@ feet="Herculean boots"
 }
 sets.engaged.PDT = set_combine(sets.engaged, {
 head="Meghanada visor +1",
-ear1="Infused earring",
-ear2="Telos earring",
+ear1="Telos earring",
+ear2="Cessance earring",
 neck="Loricate torque +1",
 body="Meghanada cuirie",
-hands="Meg. gloves +1",
+hands="Meghanada gloves +2",
 ring1="Defending Ring",
 ring2="Vocane Ring",
 back="Moonbeam cape",
 waist="Flume Belt +1",
 legs="Meg. Chausses +1",
-feet="Meg. Jam. +1"
+feet="Meg. Jam. +2"
 })
 sets.engaged.Yoichinoyumi = set_combine(sets.engaged, {})
 sets.engaged.Melee = {
@@ -235,29 +235,29 @@ neck="Asperity necklace",
 ear1="Steelflash earring",
 ear2="Bladeborn Earring",
 body="Adhemar jacket",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Epona's Ring",
 back="Lupine cape",
 waist="Windbuffet belt +1",
-legs="Adhemar kecks",
+legs="Adhemar kecks +1",
 feet="Herculean boots"
 }
 
 
 
 sets.engaged.Melee.PDT = set_combine(sets.engaged.Melee, {
-neck="Twilight Torque",
+neck="Loricate Torque +1",
 ring1="Defending Ring",
-ring2="Dark Ring"
+ring2="Vocane ring"
 })
 sets.engaged.DW ={
 head="Dampening Tam",
 neck="Lissome necklace",
-ear1="Cessance earring",
-ear2="Telos Earring",
+ear1="Telos earring",
+ear2="Cessance Earring",
 body="Adhemar jacket",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Chirich Ring",
 ring2="Chirich Ring",
 back="Lupine cape",
@@ -268,9 +268,9 @@ feet="Herculean boots"
 
 sets.engaged.DW.Acc = {
 head="Dampening Tam",
-neck="Erudition necklace",
-ear1="Cessance earring",
-ear2="Telos Earring",
+neck="Lissome necklace",
+ear2="Cessance earring",
+ear1="Telos Earring",
 body="Adhemar jacket",
 hands=gear.AdhemarWristbandsMelee,
 ring1="Chirich Ring",
@@ -278,7 +278,7 @@ ring2="Chirich Ring",
 back="Lupine cape",
 waist="Kentarch belt +1",
 legs="Samnuha tights",
-feet="Herculean boots"
+feet=gear.TAHerculeanBoots
 }
 
 
@@ -303,10 +303,10 @@ sets.precast.RA = {
 head="Amini Gapette +1", --7 snapshot
 body="Amini Caban +1",  --7% delay reduction under VS
 hands="Iuitl Wristbands +1", --6 snapshot
-legs="Nahtirah trousers", --9 snapshot
+legs="Adhemar kecks", --9 snapshot
 back="Lutian cape",  --3 snapshot
 waist="Impulse Belt", --3 snapshot
-feet="Meghanada jambeaux +1"  --8 snapshot
+feet="Meghanada jambeaux +2"  --10 snapshot
 }
 ------------------------------------------------------------------
 -- Default Base Gear Sets for Ranged Attacks. Geared for Gun
@@ -314,28 +314,28 @@ feet="Meghanada jambeaux +1"  --8 snapshot
 sets.midcast.RA = {
 head="Arcadian Beret +1",
 neck="Ocachi Gorget",
-ear1="Enervating earring",
-ear2="Telos Earring",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Arcadian jerkin +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="K'ayres Ring",
-back="Belenus's cape",
-waist="Kwahu kachina Belt",
-legs="Nahtirah Trousers",
+back=gear.RngTPCape,
+waist="Yemaya Belt",
+legs="Adhemar kecks +1",
 feet="Orion Socks +1"
 }
 sets.midcast.RA.Mid = set_combine(sets.midcast.RA, {
 neck="Erudition necklace",
 body="Orion jerkin +2",
-back="Belenus's Cape", 
+back=gear.RngTPCape,
 legs="Samnuha tights"
 })
 
 sets.midcast.RA.MidTwo = set_combine(sets.midcast.RA.Mid, {
 neck="Erudition necklace",
 body="Amini Caban +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Hajduk Ring +1",
 back="Belenus's Cape", 
@@ -357,30 +357,30 @@ feet="Orion socks +2"
 })
 sets.midcast.RA.STP = {
 head="Arcadian Beret +1",
-neck="Erudition necklace",
-ear1="Enervating earring",
-ear2="Telos Earring",
+neck="Ocachi gorget",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Orion jerkin +2",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas ring",
 ring2="Hajduk ring +1",
-back="Belenus's cape",
-waist="Kwahu Kachina belt",
-legs="Amini brague +1",
+back=gear.RngTPCape,
+waist="Yemaya belt",
+legs="Adhemar kecks +1",
 feet="Orion socks +2",
 }
 
 sets.midcast.RA.VDAcc = {
 head="Amini Gapette +1",
 neck="Iqabi necklace",
-ear1="Enervating earring",
-ear2="Telos Earring",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Orion jerkin +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Paqichikaji ring",
 Ring2="Hajduk Ring",
 back="Lutian cape",
-waist="Elanid Belt",
+waist="Kwahu kachina belt +1",
 legs="Arcadian braccae +1",
 feet="Orion Socks +1"
 }
@@ -393,8 +393,8 @@ feet="Orion Socks +1"
 sets.midcast.RA.Stave = {
 head="Arcadian Beret +1",
 neck="Ocachi Gorget",
-ear1="Enervating earring",
-ear2="Telos Earring",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Arcadian jerkin +1",
 hands="Sigyn's bazubands",
 ring1="Rajas Ring",
@@ -408,7 +408,7 @@ feet="Orion Socks +1"
 sets.midcast.RA.Stave.Mid = set_combine(sets.midcast.RA.Stave, {
 neck="Erudition necklace",
 body="Orion jerkin +2",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 rring="Hajduk ring +1",
 back="Lutian cape",
 legs="Arcadian braccae +1"
@@ -432,10 +432,10 @@ legs="Amini brague +1",
 sets.midcast.RA.Stave.VDAcc = {
 head="Amini Gapette +1",
 neck="Iqabi necklace",
-ear1="Enervating earring",
-ear2="Telos Earring",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Orion jerkin +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Hajduk ring +1",
 Ring2="Hajduk Ring +1",
 back="Lutian cape",
@@ -452,7 +452,7 @@ ring2="K'ayres Ring",
 sets.midcast.RA.Mid.SamRoll = set_combine(sets.midcast.RA.SamRoll, {
 ring1="Paqichikaji Ring",
 back="Lutian Cape",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Samnuha tights"
 })
 sets.midcast.RA.Acc.SamRoll = set_combine(sets.midcast.RA.Mid.SamRoll, {
@@ -470,17 +470,17 @@ waist="Elanid Belt"
 sets.midcast.RA.Stave.Mid.SamRoll = set_combine(sets.midcast.RA.Stave.Mid, {
 body="Arcadian jerkin +1",
 legs="Samnuha tights",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 })
 sets.midcast.RA.Stave.Acc.SamRoll = set_combine(sets.midcast.RA.Stave.Acc, {})
 -- SAM Subjob
 sets.midcast.RA.SAM = {
 head="Arcadian Beret +1",
 neck="Ocachi Gorget",
-ear1="Enervating earring",
-ear2="Telos Earring",
+ear2="Enervating earring",
+ear1="Telos Earring",
 body="Orion jerkin +2",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="K'ayres Ring",
 back="Lutian cape",
@@ -499,7 +499,7 @@ legs="Samnuha tights",
 
 sets.midcast.RA.SAM.Mid = set_combine(sets.midcast.RA.SAM, {
 neck="Erudition necklace",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring2="Hajduk ring"
 })
 sets.midcast.RA.SAM.Acc = set_combine(sets.midcast.RA.SAM.Mid, {
@@ -509,22 +509,22 @@ ring2="Hajduk Ring"
 })
 -- Stave set for SAM
 sets.midcast.RA.SAM.Stave = set_combine(sets.midcast.RA.SAM, {
-hands=gear.AdhemarWristbandsRanged
+hands="Adhemar Wristbands +1"
 })
 sets.midcast.RA.SAM.Stave.Mid = set_combine(sets.midcast.RA.SAM.Mid, {
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring2="Hajduk ring",
 legs="Samnuha tights"
 })
 sets.midcast.RA.SAM.Stave.Acc = set_combine(sets.midcast.RA.SAM.Acc, {})
 -- Samurai Roll for /sam, assume we're using a staff
 sets.midcast.RA.SAM.Stave.SamRoll = set_combine(sets.midcast.RA.SAM.Stave, {
-hands=gear.AdhemarWristbandsRanged
+hands="Adhemar Wristbands +1"
 })
 
 sets.midcast.RA.SAM.Stave.STP= set_combine(sets.midcast.RA.SAM.Stave.Acc, {
 neck="Ocachi gorget",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring2="K'ayres ring",
 waist="Patentia sash",
 back="Sylvan chlamys",
@@ -534,14 +534,14 @@ feet="Orion socks +1"
 
 sets.midcast.RA.SAM.Stave.Mid.SamRoll = set_combine(sets.midcast.RA.SAM.Stave.Mid, {
 ear1="Enervating earring",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Samnuha tights"
 })
 sets.midcast.RA.SAM.Stave.Acc.SamRoll = set_combine(sets.midcast.RA.SAM.Stave.Acc, {
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 })
 sets.midcast.RA.SAM.Stave.Acc.SamRoll = set_combine(sets.midcast.RA.SAM.Stave, {
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 })
 -- Bow base set.
 sets.midcast.RA.Yoichinoyumi = {
@@ -551,7 +551,7 @@ ear1="Novia Earring",
 ear2="Tripudio Earring",
 body="Orion jerkin +2",
 --body="Arcadian jerkin +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="K'ayres Ring",
 back="Sylvan Chlamys",
@@ -562,7 +562,7 @@ feet="Arcadian Socks +1"
 sets.midcast.RA.Yoichinoyumi.Mid = set_combine(sets.midcast.RA.Yoichinoyumi, {
 ear1=gear.Earring,
 back="Lutian Cape",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Samnuha tights",
 feet="Orion Socks +1"
 })
@@ -582,14 +582,14 @@ hands="Sylvan Glovelettes +2",
 legs="Nahtirah Trousers"
 })
 sets.midcast.RA.Yoichinoyumi.Mid.Decoy = set_combine(sets.midcast.RA.Yoichinoyumi.Decoy, {
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Samnuha tights",
 feet="Orion Socks +1"
 })
 sets.midcast.RA.Yoichinoyumi.Acc.Decoy = set_combine(sets.midcast.RA.Yoichinoyumi.Mid.Decoy, {
 ear1=gear.Earring,
 neck="Iqabi Necklace",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Longshot Ring",
 ring2="Paqichikaji Ring",
 legs="Arcadian Braccae +1"
@@ -613,7 +613,7 @@ body="Orion jerkin +2",
 })
 sets.midcast.RA.Stave.Yoichinoyumi.Acc.SamRoll = set_combine(sets.midcast.RA.Stave.Yoichinoyumi.Mid.SamRoll, {
 neck="Iqabi Necklace",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Longshot Ring",
 feet="Orion Socks +1"
 })
@@ -625,7 +625,7 @@ legs="Samnuha tights"
 })
 sets.midcast.RA.Stave.Yoichinoyumi.Mid.Decoy = set_combine(sets.midcast.RA.Stave.Yoichinoyumi.Decoy, {
 body="Orion jerkin +2",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 back="Lutian Cape",
 legs="Nahtirah Trousers"
 })
@@ -642,7 +642,7 @@ ear1=gear.Earring,
 body="Arcadian jerkin +1",
 hands="Arcadian Bracers +1",
 ring2="Ifrit Ring",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 legs="Nahtirah Trousers",
 feet="Arcadian Socks +1"
 })
@@ -655,7 +655,7 @@ ring2="Longshot Ring"
 sets.midcast.RA.Stave.Yoichinoyumi.Acc.Decoy.SamRoll = set_combine(sets.midcast.RA.Stave.Yoichinoyumi.Mid.Decoy.SamRoll, {
 neck="Iqabi Necklace",
 ring1="Paqichikaji Ring",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Arcadian Braccae +1",
 feet="Orion Socks +1"
 })
@@ -691,10 +691,10 @@ neck="Ocachi Gorget",
 ear1="Telos earring",
 ear2="Moonshade Earring",
 body="Khepri jacket",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Hajduk Ring +1",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 waist="Elanid Belt",
 legs="Nahtirah Trousers",
 feet="Orion Socks +1"
@@ -705,10 +705,10 @@ neck="Ocachi Gorget",
 ear1="Telos earring",
 ear2="Moonshade Earring",
 body="Orion jerkin +1",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Hajduk Ring +1",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 waist="Elanid Belt",
 legs="Nahtirah Trousers",
 feet="Orion Socks +1"
@@ -745,7 +745,7 @@ body="Samnuha coat",
 ear1="Friomisi Earring",
 ear2="Moonshade Earring",
 neck="Fotia gorget",
-hands=gear.MABWSDHerculeanGloves,
+hands="Carmine finger gauntlets +1",
 ring1="Acumen Ring",
 ring2="Arvina Ringlet +1",
 waist="Fotia Belt",
@@ -770,7 +770,7 @@ hands="Arcadian bracers +1",
 waist="Fotia Belt",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 legs="Nahtirah trousers",
 feet="Arcadian socks +1"
 }
@@ -784,7 +784,7 @@ body="Orion jerkin +2",
 hands="Sigyn's bazubands",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Lutian cape",
+back=gear.RngWSDCape,
 waist="Fotia belt",
 legs="Nahtirah trousers",
 feet="Orion socks +1"
@@ -795,27 +795,27 @@ head="Umbani cap",
 neck="Fotia gorget",
 waist="Fotia Belt",
 ring1="Rajas Ring",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 legs="Arcadian Braccae +1",
 feet="Orion socks +1",
 body="Orion jerkin +1",
 ring2="Hajduk ring",
-back="Lutian cape"
+back=gear.RngWSDCape
 }
 
 sets.precast.WS['Coronach'] = set_combine(sets.Coronach, {
-head="Arcadian beret +1",
+head="Orion beret +1",
 neck="Ocachi Gorget",
 ear1="Vulcan's pearl",
 ear2="Moonshade Earring",
 body="Amini Caban +1",
-hands="Arcadian bracers +1",
+hands="Meghanada gloves +2",
 waist="Fotia Belt",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Buquwik Cape",
-legs="Nahtirah trousers",
-feet="Arcadian socks +1"
+back=gear.RngWSDCape,
+legs="Adhemar kecks +1",
+feet="Meg. Jam. +2"
 })
 
 sets.precast.WS['Coronach'].STP = set_combine(sets.Coronach, {
@@ -828,7 +828,7 @@ hands="Arcadian bracers +1",
 waist="Fotia Belt",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 legs="Nahtirah trousers",
 feet="Arcadian socks +1"
 })
@@ -843,7 +843,7 @@ body="Orion jerkin +2",
 hands="Sigyn's bazubands",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Lutian cape",
+back=gear.RngWSDCape,
 waist="Fotia belt",
 legs="Nahtirah trousers",
 feet="Orion socks +1"
@@ -852,13 +852,13 @@ feet="Orion socks +1"
 sets.precast.WS['Coronach'].Mid.STP = set_combine(sets.Coronach,{
 head="Arcadian beret +1",
 neck="Ocachi Gorget",
-ear1="Vulcan's pearl",
-ear2="Telos earring",
+ear2="Vulcan's pearl",
+ear1="Telos earring",
 body="Orion jerkin +2",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Rajas Ring",
 ring2="Ifrit Ring",
-back="Lutian cape",
+back=gear.RngWSDCape,
 waist="Fotia belt",
 legs="Nahtirah trousers",
 feet="Orion socks +1"
@@ -867,16 +867,15 @@ feet="Orion socks +1"
 
 
 sets.precast.WS['Coronach'].Acc = set_combine(sets.Coronach, {
-head="Umbani cap",
-neck="Fotia gorget",
+neck="Fotia Gorget",
+ear2="Moonshade earring",
+ear1="Telos earring",
+body="Orion Jerkin +2",
+hands="Meghanada gloves +2",
 waist="Fotia Belt",
-ring1="Rajas Ring",
-hands=gear.AdhemarWristbandsRanged,
-legs="Arcadian Braccae +1",
-feet="Orion socks +1",
-body="Orion jerkin +1",
-ring2="Hajduk ring",
-back="Lutian cape"
+legs="Adhemar kecks +1",
+feet="Orion socks +2"
+
 })
 
 sets.precast.WS['Coronach'].SAM = set_combine(sets.precast.WS, {
@@ -884,28 +883,31 @@ neck="Fotia gorget",
 ear1="Tripudio Earring",
 ear2="Neritic Earring",
 body="Orion jerkin +2",
-hands="Sylvan Glovelettes +2",
+hands="Sylvan Glovelettes +1",
 ring1="Rajas ring",
 waist="Fotia belt",
 legs="Samnuha tights"
 })
 -- LAST STAND
 sets.LastStand = {
+head="Orion Beret +2",
 neck="Fotia Gorget",
-ear2="Moonshade earring",
 ear1="Telos earring",
-body="Amini Caban +1",
+ear2="Moonshade earring",
+body="Orion Jerkin +2",
+hands="Meghanada gloves +2",
 waist="Fotia Belt",
-feet="Amini bottillons +1"
+legs="Adhemar kecks +1",
+feet="Orion socks +2"
 }
 sets.precast.WS['Last Stand'] = set_combine(sets.precast.WS, sets.LastStand)
 sets.precast.WS['Last Stand'].Mid = set_combine(sets.precast.WS.Mid, sets.LastStand)
 sets.precast.WS['Last Stand'].Acc = set_combine(sets.precast.WS.Acc, sets.LastStand)
 sets.precast.WS['Last Stand'].SAM = set_combine(sets.precast.WS, {
 neck="Fotia Gorget",
-ear1="Vulcan's pearl",
+ear1="Telos earring",
 ear2="Moonshade Earring",
-hands=gear.AdhemarWristbandsRanged,
+hands="Adhemar Wristbands +1",
 ring1="Garuda Ring",
 ring2="Stormsoul Ring",
 waist="Fotia Belt",
@@ -974,7 +976,7 @@ sets.Sidewinder = {
 neck="Fotia Gorget",
 waist="Fotia Belt",
 hands="Arcadian Bracers +1",
-back="Buquwik Cape",
+back=gear.RngWSDCape,
 feet="Arcadian Socks +1"
 }
 sets.precast.WS['Sidewinder'] = set_combine(sets.precast.WS, sets.Sidewinder)
@@ -1013,13 +1015,13 @@ head="Mummu bonnet +1",
 neck="Rancor Collar",
 ear1="Moonshade earring",
 ear2="Telos earring",
-body="Orion Jerkin +2",
+body="",
 hands="Orion Bracers +2",
 ring1="Hajduk Ring +1",
 ring2="Hajduk Ring +1",
 back="Belenus's Cape",
-waist="Kwahu kachina belt",
-legs="Amini brague +1",
+waist="Kwahu kachina belt +1",
+legs="Adhemar kecks +1",
 feet="Mummu gamashes +1"
 }
 
@@ -1027,15 +1029,15 @@ sets.buff.Barrage.Mid = {
 
 head="Mummu bonnet +1",
 neck="Rancor Collar",
-ear1="Moonshade earring",
-ear2="Telos earring",
+ear2="Enervating earring",
+ear1="Telos earring",
 body="Orion Jerkin +2",
 hands="Orion Bracers +2",
 ring1="Hajduk Ring +1",
 ring2="Hajduk Ring +1",
 back="Belenus's Cape",
 waist="Kwahu kachina belt",
-legs="Adhemar kecks",
+legs="Adhemar kecks +1",
 feet="Mummu gamashes +1"
 }
 
@@ -1043,15 +1045,15 @@ sets.buff.Barrage.Acc = {
 
 head="Mummu bonnet +1",
 neck="Rancor Collar",
-ear1="Moonshade earring",
-ear2="Telos earring",
+ear2="Enervating earring",
+ear1="Telos earring",
 body="Orion Jerkin +2",
 hands="Orion Bracers +2",
 ring1="Hajduk Ring +1",
 ring2="Hajduk Ring +1",
 back="Belenus's Cape",
 waist="Kwahu kachina belt",
-legs="Adhemar kecks",
+legs="Adhemar kecks +1",
 feet="Mummu gamashes +1"
 }
 sets.buff.Camouflage = {body="Orion Jerkin +1"}

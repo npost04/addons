@@ -67,7 +67,7 @@ back="Shaper's shawl"}
     -- Precast sets to enhance JAs
     sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
     sets.precast.JA['Life Cycle'] = {head="Azimuth Hood +1", body="Geomancy Tunic"}
-    sets.precast.JA['Full Circle'] = {hands="Bagua Mitaines"}
+    sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1", hands="Bagua Mitaines +1"}
     sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals"}
 
     -- Fast cast sets for spells
@@ -97,8 +97,7 @@ back="Shaper's shawl"}
     })
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {
-        neck="Stoicheion Medal",
-        hands="Bagua Mitaines",
+        hands="Bagua Mitaines +1",
     })
 
     
@@ -146,36 +145,39 @@ back="Shaper's shawl"}
 
     -- Base fast recast for spells
     sets.midcast.FastRecast = {
-	    head=gear.MerlinicHoodFC,
-        ear2="Loquacious Earring",
+	    head=gear.MerlinicHoodFC, --15%
+        ear1="Enchanter earring +1", --2%
+		ear2="Loquacious earring", --2%
         body="Anhur robe", -- 10%
         hands="Helios gloves", -- 5%
-        ring1="Prolix Ring",
-	    ring2="Weather. ring",
+        ring1="Prolix Ring", --2%
+	    ring2="Weather. ring", --5%
         back="Lifestream cape", --7%
         waist="Witful Belt", -- 4%
-        legs="Geomancy Pants +1", -- 10%
-	    feet=gear.MerlinicCrackowsFC
+        legs="Geomancy Pants +1", -- 11%
+	    feet=gear.MerlinicCrackowsFC --9%
     }
 
     sets.midcast.Geomancy = {
-		main="Solstice",
+		main=gear.PetSolstice,
 		sub="Genbu's shield",
         range="Dunna", 
         head="Azimuth Hood +1", -- 15
 		neck="Incanter's torque", --10
 		body="Bagua Tunic +1", -- 12
-        hands="Geomancy Mitaines +1", -- 15        
+        hands="Geomancy Mitaines +2", -- 17 
 		ring1="Stikini ring",
 		ring2="Stikini ring",
         back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +18','Pet: Damage taken -3%',}}, -- 15
         legs="Azimuth tights",
-        feet="Azimuth gaiters +1"
+        --feet="Azimuth gaiters +1"
+		feet="Medium's sabots"
     }
 
     sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy, {
         legs="Bagua Pants",
-		feet="Azimuth gaiters +1"
+		--feet="Azimuth gaiters +1"
+		feet="Medium's sabots"
     })
 
     sets.midcast.Cure = {
@@ -199,10 +201,10 @@ back="Shaper's shawl"}
 	head=gear.MerlinicHoodMB,
 	neck="Eddy necklace",
 	ear1="Friomisi earring",
-	ear2="Hecate's earring",
-	body="Witching Robe",
+	ear2="Barkarole earring",
+	body="Shamash Robe",
 	hands="Amalric gages",
-	ring1="Locus ring",
+	ring1="Strendu ring",
 	ring2="Mujin band",
 	back="Seshaw cape",
 	waist="Refoccilation stone",
@@ -212,8 +214,8 @@ back="Shaper's shawl"}
     
     sets.midcast.HighTierNuke.Resistant = set_combine(sets.midcast.HighTierNuke, {
 	
-        ear1="Psystorm Earring",
-        ear2="Lifestorm Earring",
+        lear="Gwati Earring", 
+        rear="Barkarole Earring",
         ring1="Weather. Ring",
         ring2="Sangoma Ring",
         --feet="Bokwus Boots"
@@ -225,10 +227,10 @@ back="Shaper's shawl"}
 	head=gear.MerlinicHoodMB,
 	neck="Mizukage-no-Kubikazari",
 	ear1="Friomisi earring",
-	ear2="Hecate's earring",
-	body="Hagondes coat",
+	ear2="Barkarole earring",
+	body="Shamash Robe",
 	hands="Amalric gages",
-	ring1="Locus ring",
+	ring1="Strendu ring",
 	ring2="Mujin band",
 	back="Seshaw cape",
 	waist="Refoccilation stone",
@@ -245,10 +247,10 @@ back="Shaper's shawl"}
 	head=gear.MerlinicHoodMB,
 	neck="Eddy necklace",
 	ear1="Friomisi earring",
-	ear2="Hecate's earring",
-	body="Hagondes coat",
+	ear2="Barkarole earring",
+	body="Shamash Robe",
 	hands="Amalric gages",
-	ring1="Locus ring",
+	ring1="Strendu ring",
 	ring2="Mujin band",
 	back="Seshaw cape",
 	waist="Refoccilation stone",
@@ -257,8 +259,8 @@ back="Shaper's shawl"}
     })
     
     sets.midcast.LowTierNuke.Resistant = set_combine(sets.midcast.LowTierNuke, {
-        ear1="Psystorm Earring", 
-        ear2="Lifestorm Earring",
+        lear="Gwati Earring", 
+        rear="Barkarole Earring",
 	ring1="Weather. Ring",
         ring2="Sangoma Ring"
     })
@@ -270,10 +272,10 @@ back="Shaper's shawl"}
 	head=gear.MerlinicHoodMB,
 	neck="Mizukage-no-Kubikazari",
 	ear1="Friomisi earring",
-	ear2="Hecate's earring",
-	body="Hagondes coat",
+	ear2="Barkarole earring",
+	body="Shamash Robe",
 	hands="Amalric gages",
-	ring1="Locus ring",
+	ring1="Strendu ring",
 	ring2="Mujin band",
 	back="Seshaw cape",
 	waist="Refoccilation stone",
@@ -286,9 +288,9 @@ back="Shaper's shawl"}
         ammo="Dunna",
         head="Jhakri coronal +1",
         neck="Sanctity necklace",		
-        lear="Lifestorm Earring", 
-        rear="Psystorm Earring",
-        body="Jhakri robe",
+        lear="Gwati Earring", 
+        rear="Barkarole Earring",
+        body="Shamash robe",
         hands="Jhakri cuffs +1",
         ring1="Stikini ring", 
         ring2="Stikini Ring",
@@ -298,14 +300,14 @@ back="Shaper's shawl"}
     }
 
 sets.midcast.Macc.Burst = { 
-        main=gear.PetSolstice,
+        main=gear.NukeSolstice,
         sub="Culminus", 
         ammo="Dunna",
         head="Jhakri coronal +1",
         neck="Sanctity necklace",		
-        lear="Lifestorm Earring", 
-        rear="Psystorm Earring",
-        body="Jhakri robe",
+        lear="Gwati Earring", 
+        rear="Barkarole Earring",
+        body="Shamash robe",
         hands="Jhakri cuffs +1",
         ring1="Stikini ring", 
         ring2="Stikini Ring",
@@ -313,21 +315,53 @@ sets.midcast.Macc.Burst = {
 		legs=gear.MerlinicShalwarMB,
 		feet="Jhakri pigaches +1"
     }
+sets.precast.Impact = {
+        main=gear.PetSolstice,
+		sub="Culminus",
+		ranged="Dunna",
+        neck="Orunmila's torque",
+    	ear1="Enchanter earring +1",
+        ear2="Loquacious Earring",
+        body="Twilight Cloak",
+		hands="Helios gloves",
+        ring1="Prolix Ring",
+     	ring2="Weather. Ring",
+        back="Lifestream cape",
+        waist="Witful Belt",
+        legs="Geomancy Pants +1",
+        feet=gear.MerlinicCrackowsFC
+		
+    }
     
     sets.midcast.Aspir = set_combine(sets.midcast.Macc, { 
         head="Bagua Galero",
-        neck="Dark Torque", 
-        ring1="Excelsis Ring",
-        body="Geomancy tunic +1",
-        waist="Casso Sash",
-        --legs="Azimuth Tights",
+        neck="Incanter's torque", 
+        body="Geomancy tunic",
+        waist="Fucho-no-Obi",
+        legs="Azimuth Tights",
+		feet=gear.MerlinicCrackowsFC
     })
     sets.midcast.Drain = sets.midcast.Aspir
     sets.midcast.Stun = sets.midcast.Macc
     
     sets.midcast['Enfeebling Magic'] = sets.midcast.Macc
     sets.midcast.ElementalEnfeeble = sets.midcast.Macc
-        
+	
+    sets.midcast.Impact = { 
+        main=gear.NukeSolstice,
+        sub="Culminus", 
+        ammo="Dunna",
+        neck="Sanctity necklace",		
+        lear="Gwati Earring", 
+        rear="Barkarole Earring",
+        body="Twilight cloak",
+        hands="Jhakri cuffs +1",
+        ring1="Stikini ring", 
+        ring2="Stikini Ring",
+        waist="Eschan stone", 
+		legs=gear.MerlinicShalwarMB,
+		feet="Jhakri pigaches +1"
+    }
 
 	sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque", 
@@ -342,7 +376,22 @@ sets.midcast.Macc.Burst = {
     --------------------------------------
 
     -- Resting sets
-    sets.resting = sets.idle
+    sets.resting = {
+		main="Bolelabunga",
+        sub="Genbu's Shield",
+        range="Dunna",
+        head="Befouled crown",
+        neck="Loricate torque +1",
+        ear1="Ethereal Earring",
+        ear2="Infused Earring",
+        body="Shamash Robe",
+        hands="Bagua Mitaines +1",
+        ring1="Vocane Ring",
+        ring2="Defending Ring",
+        back="Umbra cape",
+        waist="Fucho-no-Obi",
+        legs="Assid. pants +1",
+        feet="Geomancy Sandals +2"}
 
 
     -- Idle sets
@@ -350,26 +399,26 @@ sets.midcast.Macc.Burst = {
         main="Bolelabunga",
         sub="Genbu's Shield",
         range="Dunna",
-        head="Azimuth hood +1",
+        head="Befouled crown",
         neck="Loricate torque +1",
         ear1="Ethereal Earring",
         ear2="Infused Earring",
-        body="Witching Robe",
-        hands="Bagua Mitaines",
+        body="Shamash Robe",
+        hands="Bagua Mitaines +1",
         ring1="Vocane Ring",
         ring2="Defending Ring",
         back="Umbra cape",
         waist="Fucho-no-Obi",
         legs="Assid. pants +1",
-        feet="Geomancy Sandals"
+        feet="Geomancy Sandals +2"
     }
     sets.idle.PDT = set_combine(sets.idle, {
         head="Hagondes hat",
 		neck="Loricate torque +1",
-		body="Hagondes coat",
-        hands="Geomancy Mitaines +1",
-	    ring1="Defending ring",
-        ring2="Vocane Ring",
+		body="Shamash Robe",
+        hands="Geomancy Mitaines +2",
+	    ring1="Vocane ring",
+        ring2="Defending Ring",
         back="Umbra cape",
 		feet="Azimuth gaiters +1"
     })
@@ -381,10 +430,10 @@ sets.midcast.Macc.Burst = {
         head="Azimuth Hood +1",
 		ear1="Handler's earring",
 		ear2="Handler's earring +1",
-		body="Vrikodara jupon",
-        hands="Geomancy Mitaines +1",
-		ring1="Defending ring",
-		ring2="Vocane ring",
+		body="Shamash Robe",
+        hands="Geomancy Mitaines +2",
+		ring1="Vocane ring",
+		ring2="Defending ring",
         back={ name="Lifestream Cape", augments={'Geomancy Skill +3','Pet: Damage taken -3%','Damage taken-4%',}},
 		waist="Isa belt",
 		legs="Psycloth Lappas",
@@ -394,13 +443,14 @@ sets.midcast.Macc.Burst = {
     sets.idle.PDT.Pet = {
 		main="Mafic cudgel",
 	    sub="Genbu's shield",
+		range="Dunna",
         head="Azimuth Hood +1",
 		ear1="Handler's earring",
 		ear2="Handler's earring +1",
-		body="Vrikodara jupon",
-        hands="Geomancy Mitaines +1",
-		ring1="Defending ring",
-		ring2="Vocane ring",
+		body="Mallquis Saio",
+        hands="Geomancy Mitaines +2",
+		ring1="Vocane ring",
+		ring2="Defending ring",
         back={ name="Lifestream Cape", augments={'Geomancy Skill +3','Pet: Damage taken -3%','Damage taken-4%',}},
 		waist="Isa belt",
 		legs="Psycloth Lappas",
@@ -409,16 +459,16 @@ sets.midcast.Macc.Burst = {
     -- .Indi sets are for when an Indi-spell is active.
     sets.idle.Indi = set_combine(sets.idle, {
         legs="Assid. pants +1", 
-        feet="Geomancy Sandals",
+        feet="Geomancy Sandals +2",
         back={ name="Lifestream Cape", augments={'Geomancy Skill +3','Pet: Damage taken -3%','Damage taken-4%',}},
-        feet="Azimuth Gaiters +1"
+        
     })
     sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {
         legs="Psycloth lappas", 
     })
     sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {
         legs="Psycloth lappas", 
-        feet="Geomancy Sandals"
+        feet="Geomancy Sandals +2"
     })
     sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {
         legs="Psycloth lappas", 
@@ -435,8 +485,8 @@ sets.midcast.Macc.Burst = {
         head="Hike Khat",
         neck="Loricate torque +1",
         ear1="Ethereal Earring",
-        body="Hagondes coat",
-        hands="Geomancy Mitaines +1",
+        body="Mallquis saio",
+        hands="Geomancy Mitaines +2",
         ring1="Defending Ring",
         ring2="Vocane Ring",
         back="Moonbeam Cape",
@@ -451,7 +501,7 @@ sets.midcast.Macc.Burst = {
         ear1="Zennaroi Earring",
         ear2="Loquacious Earring",
         body="Azimuth Coat",
-        hands="Geomancy Mitaines +1",
+        hands="Geomancy Mitaines +2",
         ring1="Defending Ring",
         ring2="Shadow Ring",
         back="Umbra Cape",
@@ -460,7 +510,7 @@ sets.midcast.Macc.Burst = {
         --feet="Hagondes Sabots"
     }
 
-    sets.Kiting = {feet="Geomancy sandals"}
+    sets.Kiting = {feet="Geomancy sandals +2"}
 
     sets.latent_refresh = {waist="Fucho-no-obi"}
 
@@ -482,7 +532,7 @@ sets.midcast.Macc.Burst = {
         ear2="Steelflash Earring",
         body="Azimuth Coat",
         --body="Vanir Cotehardie",
-        hands="Geomancy Mitaines +1",
+        hands="Geomancy Mitaines +2",
         ring1="Rajas Ring",
         ring2="Patricius Ring",
         back="Kayapa Cape",
@@ -499,7 +549,13 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
-
+function job_post_midcast(spell, action, spellMap, eventArgs)
+    if spell.skill == 'Elemental Magic' then
+        if spell.element == world.day_element or spell.element == world.weather_element then
+            equip(sets.midcast['Elemental Magic'], {waist="Hachirin-No-Obi"})
+        end
+    end
+end
 function job_aftercast(spell, action, spellMap, eventArgs)
     if not spell.interrupted then
         if spell.english:startswith('Indi') then
